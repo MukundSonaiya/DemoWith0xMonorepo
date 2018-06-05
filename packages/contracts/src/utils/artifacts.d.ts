@@ -1,0 +1,20 @@
+import { ContractArtifact } from '@0xproject/sol-compiler';
+export declare const artifacts: {
+    AssetProxyOwner: ContractArtifact;
+    DummyERC20Token: ContractArtifact;
+    DummyERC721Token: ContractArtifact;
+    ERC20Proxy: ContractArtifact;
+    ERC721Proxy: ContractArtifact;
+    Exchange: ContractArtifact;
+    EtherToken: ContractArtifact;
+    MixinAuthorizable: ContractArtifact;
+    MultiSigWallet: ContractArtifact;
+    MultiSigWalletWithTimeLock: ContractArtifact;
+    TestAssetProxyDispatcher: ContractArtifact;
+    TestLibBytes: ContractArtifact;
+    TestLibs: ContractArtifact;
+    TestSignatureValidator: ContractArtifact;
+    TokenRegistry: ContractArtifact;
+    Whitelist: ContractArtifact;
+    ZRX: ContractArtifact;
+};
