@@ -1,0 +1,42 @@
+{
+	"schemaVersion": "2.0.0",
+	"contractName": "SafeMath",
+	"compilerOutput": {
+		"abi": [],
+		"evm": {
+			"bytecode": {
+				"linkReferences": {},
+				"object": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820ff841578485c5425a97fcf84de6f93c98b7ab007f01bed2650af1f8de1d5bb8a0029",
+				"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x35 DUP1 PUSH1 0x1D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN STOP PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 SELFDESTRUCT DUP5 ISZERO PUSH25 0x485C5425A97FCF84DE6F93C98B7AB007F01BED2650AF1F8DE1 0xd5 0xbb DUP11 STOP 0x29 ",
+				"sourceMap": "26:1044:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:1044:0;;;;;;;"
+			}
+		}
+	},
+	"sources": {
+		"base/SafeMath.sol": {
+			"id": 0
+		}
+	},
+	"sourceCodes": {
+		"base/SafeMath.sol": "pragma solidity ^0.4.14;\n\ncontract SafeMath {\n    function safeMul(uint a, uint b) internal constant returns (uint256) {\n        uint c = a * b;\n        assert(a == 0 || c / a == b);\n        return c;\n    }\n\n    function safeDiv(uint a, uint b) internal constant returns (uint256) {\n        uint c = a / b;\n        return c;\n    }\n\n    function safeSub(uint a, uint b) internal constant returns (uint256) {\n        assert(b <= a);\n        return a - b;\n    }\n\n    function safeAdd(uint a, uint b) internal constant returns (uint256) {\n        uint c = a + b;\n        assert(c >= a);\n        return c;\n    }\n\n    function max64(uint64 a, uint64 b) internal constant returns (uint64) {\n        return a >= b ? a : b;\n    }\n\n    function min64(uint64 a, uint64 b) internal constant returns (uint64) {\n        return a < b ? a : b;\n    }\n\n    function max256(uint256 a, uint256 b) internal constant returns (uint256) {\n        return a >= b ? a : b;\n    }\n\n    function min256(uint256 a, uint256 b) internal constant returns (uint256) {\n        return a < b ? a : b;\n    }\n}\n"
+	},
+	"sourceTreeHashHex": "0x48c699dd3d727afb7e8473a48985707860a732a39119f403ccc2f4fb927bc2e4",
+	"compiler": {
+		"name": "solc",
+		"version": "soljson-v0.4.24+commit.e67f0147.js",
+		"settings": {
+			"optimizer": {
+				"enabled": false
+			},
+			"outputSelection": {
+				"*": {
+					"*": [
+						"abi",
+						"evm.bytecode.object"
+					]
+				}
+			}
+		}
+	},
+	"networks": {}
+}
